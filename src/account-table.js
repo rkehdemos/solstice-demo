@@ -1,7 +1,7 @@
 import React from 'react';
 import {Pane, Card, Table} from 'evergreen-ui';
 
-const AccountTable = (
+const AccountTable = props => (
   <Table>
     <Table.Head>
       <Table.SearchHeaderCell />
@@ -23,12 +23,12 @@ const AccountTable = (
       </Table.TextHeaderCell>
     </Table.Head>
     <Table.Body height={240}>
-      {customers.map(account => (
-        <Table.Row key={`account_{account.id}`} isSelectable onSelect={() => alert(profile.name)}>
+      {props.accounts.map(account => (
+        <Table.Row key={`account_{account.id}`} isSelectable onSelect={() => alert(account.name)}>
         </Table.Row>
       ))}
     </Table.Body>
   </Table>
 )
 
-export const AccountTable;
+export default AccountTable;

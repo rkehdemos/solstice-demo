@@ -21,7 +21,7 @@ const CustomerTable = props => (
 	  </Table.Head>
 	  <Table.Body height={240}>
 	    {props.customers.map(customer => (
-	      <Table.Row key={customer.id} isSelectable onSelect={() => alert(profile.name)}>
+	      <Table.Row key={customer.id} isSelectable onSelect={() => ''}>
 	        <Table.TextCell>{customer.first_name}</Table.TextCell>
 	        <Table.TextCell>{customer.last_name}</Table.TextCell>
 	        <Table.TextCell>{customer.is_active === 1 ? 'yes' : 'no'}</Table.TextCell>
@@ -32,4 +32,4 @@ const CustomerTable = props => (
 	</Table>
 )
 
-export const CustomerTable;
+export default CustomerTable;

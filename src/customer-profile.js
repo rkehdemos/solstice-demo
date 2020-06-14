@@ -6,4 +6,4 @@ const CustomerProfile = props => (
 	</Card>
 );
 
-export const CustomerProfile;
+export default CustomerProfile;
