@@ -93,7 +93,8 @@ class App extends React.Component {
 			        	closeProfile={this.closeDrawer} 
 			        	accounts={this.state.customerAccountMap[this.state.currentCustomerID] !== undefined ?  
 			        				this.state.customerAccountMap[this.state.currentCustomerID] :
-			        				[]}
+			        				[]
+			        			}
 			        	customerName={this.state.customers[this.state.currentCustomerID -1] !== undefined ? 
 			        					`${this.state.customers[this.state.currentCustomerID - 1].first_name} ${this.state.customers[this.state.currentCustomerID - 1].last_name}` : 
 			        					''
